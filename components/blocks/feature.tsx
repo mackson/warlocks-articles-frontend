@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { mockArticles } from "@/mocks/articles";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Feature = () => (
   <div className="w-full py-20 lg:py-40">
@@ -24,7 +25,7 @@ export const Feature = () => (
             <div key={article.id} className="flex flex-col gap-2 hover:opacity-75 cursor-pointer">
               <div className="bg-muted rounded-md aspect-video mb-2">
                 <Link href={`/article/${article.slug}`} className="block">
-                  <img className="rounded-md" src={article.cover} alt={article.title} />
+                  <Image width={0} height={0} sizes="100vw" className="rounded-md w-full h-auto" src={article.cover} alt={article.title} />
                 </Link>
               </div>
               <h3 className="text-xl tracking-tight">

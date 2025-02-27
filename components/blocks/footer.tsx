@@ -81,7 +81,7 @@ export const Footer = () => {
                 W<span className="text-pink-600">articles</span>
               </h2>
               <p className="text-lg max-w-lg leading-relaxed tracking-tight text-background/75 text-left">
-                Don't make war, make articles!
+                Dont make war, make articles!
               </p>
             </div>
             

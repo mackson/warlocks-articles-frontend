@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { EditIcon, MessageCircle, HeartIcon } from "lucide-react";
 import { CommentSection } from "@/components/blocks/articles/comments";
+import Image from "next/image";
+
 
 export const Article = () => {
   const params = useParams(); 
@@ -75,8 +77,8 @@ export const Article = () => {
         </h2>
 
         <section className="w-full flex justify-center">
-          <img
-            className="rounded-md mb-4 max-w-full"
+          <Image
+            width={700} height={500} className="rounded-md pb-4"
             src={article.cover}
             alt={article.title}
           />

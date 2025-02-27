@@ -5,14 +5,16 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { authService } from "@/lib/auth"; 
+import { authService } from "@/lib/auth";
+import Image from "next/image";
+
 
 const loginSchema = z.object({
   email: z.string().email("Invalid email").min(1, "Email is required"),
@@ -42,8 +44,8 @@ export const LoginForm = () => {
       } else {
         toast.error("Invalid credentials. Please try again.");
       }
-    } catch (error: any) {
-      toast.error(error.message || "Login failed. Please try again.");
+    } catch (error) {
+      toast.error(`Login failed. Please try again: ${error}`);
     } finally {
       setLoading(false);
     }
@@ -56,7 +58,7 @@ export const LoginForm = () => {
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-4">
-              <img src="/48690.png" alt="login" />
+              <Image width={0} height={0} sizes="100vw" className="rounded-md w-full h-auto" src="/48690.png" alt="login" />
             </div>
           </div>
 

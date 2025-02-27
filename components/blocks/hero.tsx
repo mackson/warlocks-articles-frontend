@@ -2,6 +2,8 @@
 
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
 export const Hero = () => (
   <div className="w-full py-10 lg:py-20">
     <div className="container mx-auto">
@@ -10,7 +12,7 @@ export const Hero = () => (
           
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
-              Don't make war, make articles!
+              Dont make war, make articles!
             </h1>
             <p className="text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
               Warticles is a place to create, write, share, and discuss articles, knowledge, and ideas.
@@ -29,11 +31,11 @@ export const Hero = () => (
         </div>
         <div className="grid grid-cols-2 gap-8">
           <div className="bg-muted rounded-md aspect-square">
-            <img className="rounded-md" src="2150165958.jpg" alt="war1" />
+            <Image width={0} height={0} sizes="100vw" className="rounded-md w-full h-auto" src="2150165958.jpg" alt="war1" />
           </div>
          
           <div className="bg-muted rounded-md aspect-square">
-            <img className="rounded-md" src="2150165963.jpg" alt="war1" />
+            <Image width={0} height={0} sizes="100vw" className="rounded-md w-full h-auto" src="2150165963.jpg" alt="war1" />
           </div>
         </div>
       </div>

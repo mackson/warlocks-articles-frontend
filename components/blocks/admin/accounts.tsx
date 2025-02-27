@@ -16,68 +16,7 @@ export const AccountsList = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="flex flex-col gap-2">
-            <div className="bg-muted rounded-md aspect-video mb-2">
-              <img className="rounded-md" src="https://fakeimg.pl/600x400?text=Warticles" alt="article1" />
-            </div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-muted-foreground text-base">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <div className="bg-muted rounded-md aspect-video mb-2">
-              <img className="rounded-md" src="https://fakeimg.pl/600x400?text=Warticles" alt="article2" />
-            </div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-muted-foreground text-base">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <div className="bg-muted rounded-md aspect-video mb-2">
-              <img className="rounded-md" src="https://fakeimg.pl/600x400?text=Warticles" alt="article2" />
-            </div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-muted-foreground text-base">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <div className="bg-muted rounded-md aspect-video mb-2">
-              <img className="rounded-md" src="https://fakeimg.pl/600x400?text=Warticles" alt="article2" />
-            </div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-muted-foreground text-base">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <div className="bg-muted rounded-md aspect-video mb-2">
-              <img className="rounded-md" src="https://fakeimg.pl/600x400?text=Warticles" alt="article2" />
-            </div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-muted-foreground text-base">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <div className="bg-muted rounded-md aspect-video mb-2">
-              <img className="rounded-md" src="https://fakeimg.pl/600x400?text=Warticles" alt="article2" />
-            </div>
-            <h3 className="text-xl tracking-tight">Pay supplier invoices</h3>
-            <p className="text-muted-foreground text-base">
-              Our goal is to streamline SMB trade, making it easier and faster
-              than ever.
-            </p>
-          </div>
-        </div>
+       
       </div>
     </div>
   </div>

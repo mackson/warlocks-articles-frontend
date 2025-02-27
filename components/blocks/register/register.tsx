@@ -5,14 +5,16 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { apiService } from "@/lib/api"; // Certifique-se de importar o service correto
+import { apiService } from "@/lib/api";
+import Image from "next/image";
+
 
 const registerSchema = z.object({
   name: z.string().min(3, "Name must be at least 3 characters"),
@@ -43,8 +45,8 @@ export const RegisterForm = () => {
       } else {
         throw new Error("Registration failed");
       }
-    } catch (error: any) {
-      toast.error(error.message || "Registration failed. Please try again.");
+    } catch (error) {
+      toast.error(`Registration failed. Please try again ${error}`);
     } finally {
       setLoading(false);
     }
@@ -56,7 +58,7 @@ export const RegisterForm = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-6">
-            <img className="rounded-lg" src="/2150165967.jpg" alt="war1" />
+            <Image width={0} height={0} sizes="100vw" className="rounded-md w-full h-auto" src="/2150165967.jpg" alt="war1" />
           </div>
 
           <div className="justify-center flex items-center">

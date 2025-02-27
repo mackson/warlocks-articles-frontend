@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { HeartIcon, MessageCircle } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
+import {CommentType} from "@/types/comment";
 
 export const CommentSection = () => {
   const [comments, setComments] = useState(commentsMock);
@@ -69,7 +70,7 @@ const Comment = ({
   onLike,
   isFirstReply = false,
 }: {
-  comment: any;
+  comment: CommentType;
   onLike: (id: string) => void;
   isFirstReply?: boolean;
 }) => {
@@ -153,7 +154,7 @@ const Comment = ({
 
           {/* Lista de Replies */}
           {replies?.length > 0 &&
-            replies.map((reply: any) => (
+            replies.map((reply: CommentType) => (
               <Comment key={reply.id} comment={reply} onLike={onLike} isFirstReply={false} />
             ))}
         </div>

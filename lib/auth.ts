@@ -23,7 +23,7 @@ export const authService = {
       return null;
     }
   },
-  getUser(): any | null {
+  getUser() {
     try {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No user token found");
