@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, MoveRight, LockIcon, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
-import { DialogLogin } from "@/components/blocks/login";
-import { DialogRegister } from "./register";
+import { AvatarMenu } from "@/components/blocks/avatar";
 
 export const Header = () => {
   const navigationItems = [
@@ -36,13 +35,25 @@ export const Header = () => {
           ))}
         </div>
         <div className="flex lg:justify-center">
-          <a href="/" className="font-semibold text-4xl">
+          <a href="/" className="font-semibold text-3xl ">
             W<span className="text-pink-600">articles</span>
           </a>
         </div>
         <div className="flex justify-end w-full gap-4">
-          <DialogLogin />
-          <DialogRegister />
+          <a
+            href="/login"
+            className="gap-2 hidden md:flex border border-gray-300 rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 text-gray-900 flex items-center"
+          >
+            Login <LockIcon className="w-4 h-4" />
+          </a>
+
+          <a
+            href="/register"
+            className="gap-2 bg-gray-900 text-white rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-800 flex items-center"
+          >
+            Get Started <MoveRight className="w-4 h-4" />
+          </a>
+          <AvatarMenu />
         </div>
         <div className="flex w-12 shrink lg:hidden items-end justify-end">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>

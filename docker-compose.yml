@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend-warlocks
+    ports:
+      - "5002:5002"
+    volumes:
+      - .:/var/www/html
+      - ./default:/etc/nginx/sites-available/default
+   

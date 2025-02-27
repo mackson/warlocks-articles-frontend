@@ -1,8 +1,9 @@
-import { MoveRight, PhoneCall } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client";
 
+import { MoveRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 export const Hero = () => (
-  <div className="w-full py-20 lg:py-20">
+  <div className="w-full py-10 lg:py-20">
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
         <div className="flex gap-4 flex-col">
@@ -16,8 +17,12 @@ export const Hero = () => (
             </p>
           </div>
           <div className="flex flex-row gap-4">
-            
-            <Button size="lg" className="gap-4">
+            <Button
+              className="gap-4"
+              onClick={() => {
+                window.open("/register", "_blank");
+              }}
+            >
               Get Started <MoveRight className="w-4 h-4" />
             </Button>
           </div>
