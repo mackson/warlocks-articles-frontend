@@ -14,14 +14,16 @@ WORKDIR /var/www/html
 
 COPY package*.json ./
 
+RUN npm install --legacy-peer-deps
+
 COPY . .
 
 RUN npm run build
 
-COPY ./default /etc/nginx/sites-available/default
+COPY ./default.conf /etc/nginx/sites-available/default.conf
 
 RUN chmod +x /var/www/html/start.sh
 
-EXPOSE 80 5002
+EXPOSE 5002 80
 
 CMD ["sh", "/var/www/html/start.sh"]

@@ -27,7 +27,7 @@ Este repositório foi criado para demonstração do frontend (Warticles) para o 
 
 Você poderá testar o front-end neste endereço logo a baixo mas se quiser testar localmente, basta seguir os passos:
 
-[https://warlocks.codestation.com.br](https://warlocks.codestation.com.br)
+[http://warlocks.codestation.com.br](http://warlocks.codestation.com.br)
 
 ### O primeiro passo é clonar o projeto:
 
@@ -51,10 +51,13 @@ Obs: será necessário ter o docker e docker-compose instalados na sua máquina.
 
 ```bash
 ## Na primeira vez
-docker-compose up --build
+docker-compose up --build -d
 
 ## Após o primeiro build
 docker-compose up -d
+
+## Para parar o container
+docker-compose down
 
 ```
 
