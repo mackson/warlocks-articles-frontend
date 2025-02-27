@@ -7,7 +7,7 @@ Este repositório foi criado para demonstração do frontend (Warticles) para o 
 <img src="docs/images/front.png" alt="website" width="70%" />
 
 
-### Tecnologias usadas no backend
+### Tecnologias usadas no frontend
 
 - [ ]  Next 15 com typescript
 - [ ]  Shadcn
@@ -20,7 +20,7 @@ Este repositório foi criado para demonstração do frontend (Warticles) para o 
 
 - [ ]  Atomic Design (Blocks e ui elements)
 - [ ]  SOLID, componentes com responsabilidades bem definidas, interfaces para facilitar a troca de implementações, etc.
-- [ ]  Gitflow customizado (development / prod), com branches para features e hotfixes. Nenhuma branch pode mergeada diretamente na main, deve passar por rigorosas revisões de código antes de ser aprovada.
+- [ ]  Gitflow customizado (development / prod), com branches para features e hotfixes. Nenhuma branch pode ser mergeada diretamente na main, sem passar por rigorosas revisões de código na development antes.
 
 
 ## Como rodar localmente?
@@ -46,6 +46,7 @@ NEXT_PUBLIC_UNOPTIMIZED=true
 ```
 ## Atenção
 Toda a aplicação está conteinerizada por tanto para testar localmente basta usar os seguintes comandos:
+
 Obs: será necessário ter o docker e docker-compose instalados na sua máquina.
 
 
@@ -94,11 +95,11 @@ Para hospedar o frontend optaria por usar a AWS, com uma combinação simples de
 - [ ]  TODO: Husky para linting e commit hooks
 - [ ]  TODO: AWS S3 para armazenamento de arquivos e site estático
 - [ ]  TODO: Code review automatizado com SonarQube
-- [ ]  TODO: Ambiente de dev e prod
+- [ ]  TODO: Ambientes bem definidos de dev e prod
 - [ ]  TODO: Testes unitários dos componentes
 - [ ]  TODO: Context API para gerenciamento de estado
 
 ## Infraestruturas alternativas
 
 - Poderia usar também o AWS Amplify para hospedar o frontend.
-- Outra alternativa mais barata seria usar um container docker com Nginx, como fiz para esse desafio.
+- Outra alternativa mais barata seria usar uma VPS com container docker e Nginx, como fiz para esse desafio.
