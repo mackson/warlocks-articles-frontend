@@ -10,5 +10,5 @@ services:
       - "5002:5002"
     volumes:
       - .:/var/www/html
-      - ./default:/etc/nginx/sites-available/default
+      - ./default.conf:/etc/nginx/sites-available/default.conf
    
