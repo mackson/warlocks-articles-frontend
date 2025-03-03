@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   frontend:
     build:
@@ -8,7 +7,5 @@ services:
     container_name: frontend-warlocks
     ports:
       - "5002:5002"
-    volumes:
-      - .:/var/www/html
-      - ./default.conf:/etc/nginx/sites-available/default.conf
-   
+    environment:
+      - NODE_ENV=production
