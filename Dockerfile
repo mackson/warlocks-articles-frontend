@@ -1,29 +1,19 @@
-FROM nginx:latest
+FROM node:23 AS builder
 
-RUN apt-get update && \
-    apt-get install -y curl && \
-    curl -fsSL https://deb.nodesource.com/setup_23.x | bash - && \
-    apt-get install -y nodejs
+WORKDIR /app
 
-RUN apt-get install -y procps \
-    && apt-get install -y nano \
-    && apt-get install -y net-tools \
-    && apt-get install -y iputils-ping
+COPY package.json package-lock.json ./
 
-WORKDIR /var/www/html
-
-COPY package*.json ./
-
-RUN npm install --legacy-peer-deps
+RUN npm install --legacy-peer-deps --production
 
 COPY . .
 
 RUN npm run build
 
-COPY ./default.conf /etc/nginx/sites-available/default.conf
+FROM node:23 AS runner
+WORKDIR /app
+COPY --from=builder /app ./
 
-RUN chmod +x /var/www/html/start.sh
+EXPOSE 5005
 
-EXPOSE 5002 80
-
-CMD ["sh", "/var/www/html/start.sh"]
+CMD ["npm", "run", "start"]
